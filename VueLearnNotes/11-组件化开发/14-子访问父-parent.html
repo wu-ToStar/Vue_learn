@@ -24,7 +24,7 @@
 
     <div>
       子组件消息：{{message}}
-      <button @click="btnClick" >子组件按钮</button>
+      <button @click="btnClick">子组件按钮</button>
     </div>
   </template>
 
@@ -36,11 +36,11 @@
       template: "#cpn",
       data() {
         return {
-          message:"我是子组件的name"
+          message: "我是子组件的name"
         }
       },
       methods: {
-        btnClick(){
+        btnClick() {
           console.log("子组件按钮被点击")
           // 1.访问父组件$parent
           this.message = this.$parent.message
@@ -54,7 +54,7 @@
       el: "#app",
       data() {
         return {
-          message:"我是父组件消息"
+          message: "我是父组件消息"
         }
       },
       methods: {
