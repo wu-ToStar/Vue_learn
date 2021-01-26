@@ -15,7 +15,7 @@
     <cpn></cpn>
     <cpn></cpn>
     <cpn ref="aaa"></cpn>
-    <button @click="btnClick" >按钮</button>
+    <button @click="btnClick">按钮</button>
 
   </div>
 
@@ -35,11 +35,11 @@
       template: "#cpn",
       data() {
         return {
-          name:"我是子组件的name"
+          name: "我是子组件的name"
         }
       },
       methods: {
-        showMessage(){
+        showMessage() {
           console.log("showMessage");
         }
       },
@@ -48,11 +48,11 @@
       el: "#app",
       data() {
         return {
-          message:"hello"
+          message: "hello"
         }
       },
       methods: {
-        btnClick(){
+        btnClick() {
           // 1.children
           // console.log(this.$children[0].showMessage)
           // for (let cpn of this.$children) {
