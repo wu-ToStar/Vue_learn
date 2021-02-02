@@ -1,14 +1,34 @@
 <template>
   <div id="app">
     <router-link to="/home">Home</router-link>
-    <router-link to="/about">About</router-link>
+    <!-- <router-link to="/about">About</router-link> -->
+    <button @click="about()">About</button>
+    <router-link :to="'/user/' + userId">User</router-link>
+    <button @click="profile()">Profile</button>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
 export default {
-  name: "App"
+  name: "App",
+  data(){
+    return {userId:'lisi'}
+  },
+  methods:{
+    about(){
+      this.$router.push('/about')
+    },
+    profile(){
+      this.$router.push({
+        path:"/profile",
+        query:{
+        name:"wu",
+        age:20
+      }
+      })
+    }
+  }
 };
 </script>
 
