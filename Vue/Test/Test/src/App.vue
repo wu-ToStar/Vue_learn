@@ -5,7 +5,10 @@
     <button @click="about()">About</button>
     <router-link :to="'/user/' + userId">User</router-link>
     <button @click="profile()">Profile</button>
-    <router-view></router-view>
+
+    <keep-alive exclude="Profile,User">
+      <router-view></router-view>
+    </keep-alive>
   </div>
 </template>
 

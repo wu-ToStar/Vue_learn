@@ -1,12 +1,16 @@
 <template>
   <div>
-    <h2>own</h2>
+    <ul>
+      <li>A</li>
+      <li>B</li>
+      <li>C</li>
+    </ul>
   </div>
 </template>
 
 <script>
 export default {
-name:"Profile"
+
 }
 </script>
 

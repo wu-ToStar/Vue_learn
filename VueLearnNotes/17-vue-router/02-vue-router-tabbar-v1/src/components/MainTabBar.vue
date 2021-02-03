@@ -46,8 +46,8 @@
 </template>
 
 <script type="text/ecmascript-6">
-  import TabBar from "@/components/tabbar/TabBar"
-  import TabBarItem from "@/components/tabbar/TabBarItem"
+  import TabBar from "./tabbar/TabBar"
+  import TabBarItem from "./tabbar/TabBarItem"
   export default {
     name: "MainTabBar",
     components: {
