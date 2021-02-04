@@ -16,23 +16,23 @@
 export default {
   name: "TabBarItem",
   props: {
-    path: String,
+    path: String
   },
   data() {
     return {
       // isActive: true,
     };
   },
-  computed:{
-    isActive(){
-      return this.$route.path.indexOf(this.path) !==-1
+  computed: {
+    isActive() {
+      return this.$route.path.indexOf(this.path) !== -1;
     }
   },
   methods: {
     itemClick() {
       this.$router.push(this.path);
-    },
-  },
+    }
+  }
 };
 </script>
 
