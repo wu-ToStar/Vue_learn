@@ -4,7 +4,7 @@
   </div>
 </template>
 
-<script>
+<script>1
 export default {
   name: "TabBar"
 };

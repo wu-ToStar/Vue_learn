@@ -52,17 +52,16 @@
 </template>
 
 <script>
-import TabBar from './tabbar/TabBar'
-import TabBarItem from './tabbar/TabBarItem'
+import TabBar from "./tabbar/TabBar";
+import TabBarItem from "./tabbar/TabBarItem";
 
 export default {
   name: "MainTabBar",
   components: {
     TabBar,
-    TabBarItem,
-  },
+    TabBarItem
+  }
 };
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>
