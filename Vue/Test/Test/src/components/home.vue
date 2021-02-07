@@ -18,6 +18,8 @@ export default {
   created() {
     console.log('Home组件被创建了')
     this.$router.push(this.path)
+    console.log(this.$route)
+    console.log(this.$router)
   },
   destroyed() {
     console.log('Home组件被销毁了')
