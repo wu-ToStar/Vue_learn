@@ -6,21 +6,19 @@ Vue.use(Vuex);
 
 // 2.创建对象
 const store = new Vuex.Store({
-  state: {ss
+  state: {
     // 状态集合
-    count: 1000, // 具体的状态数据
+    count: 1000 // 具体的状态数据
   },
   mutations: {
     increment(state) {
-      state.count++
+      state.count++;
     },
     decrement(state) {
-      state.count--
+      state.count--;
     }
   },
-  actions: {
-
-  }
+  actions: {}
 });
 
 // 3.导出store对象
