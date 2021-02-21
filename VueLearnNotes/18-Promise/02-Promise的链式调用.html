@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>02-Promise的链式调用</title>
 </head>
+
 <body>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
   <script>
@@ -18,7 +20,7 @@
     }).then(res => {
       console.log(res)//打印hello
       return new Promise(resolve => {
-          resolve(res + ' world')
+        resolve(res + ' world')
       }).then(res => {
         console.log(res)//打印hello world
         return new Promise(resolve => {
@@ -38,8 +40,8 @@
       console.log(res)//打印hello
       return Promise.resolve(res + ' world')
     }).then(res => {
-        console.log(res)//打印hello world
-        return Promise.resolve(res + ',vuejs')
+      console.log(res)//打印hello world
+      return Promise.resolve(res + ',vuejs')
     }).then(res => {
       console.log(res)//打印hello world,vuejs
     })
@@ -53,8 +55,8 @@
       console.log(res)//打印hello
       return res + ' world'
     }).then(res => {
-        console.log(res)//打印hello world
-        return res + ',vuejs'
+      console.log(res)//打印hello world
+      return res + ',vuejs'
     }).then(res => {
       console.log(res)//打印hello world,vuejs
     })
@@ -68,14 +70,17 @@
       console.log(res)//打印hello
       return res + ' world'
     }).then(res => {
-        console.log(res)
-        // return Promise.reject('error message')//发生异常
-        throw 'error message' //抛出异常
+      console.log(res + "0")//打印hello world0
+      // return Promise.reject('error message')//发生异常
+      throw 'error message' //抛出异常
     }).then(res => {
-      console.log(res)//打印hello world,vuejs
+      console.log(res + "1")//跳过
+    }).then(res => {
+      console.log(res + "2")//跳过
     }).catch(error => {
       console.log(error)
     })
   </script>
 </body>
+
 </html>
